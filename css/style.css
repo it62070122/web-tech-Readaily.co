@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'readery';
+    src: url("../fonts/readery.eot?19604052");
+    src: url("../fonts/readery.eot?19604052#iefix") format('embedded-opentype'), url("../fonts/readery.woff?19604052") format('woff'), url("../fonts/readery.ttf?19604052") format('truetype'), url("../fonts/readery.svg?19604052#readery") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'readery_slab_loop';
+    src: url("../fonts/readery_loop-webfont.woff2") format("woff2"), url("../fonts/readery_loop-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'readery_slab_bold';
+    src: url("../fonts/readery_slab_bold-webfont.woff2") format("woff2"), url("../fonts/readery_slab_bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'readery_slab_regular';
+    src: url("../fonts/readery_slab_regular-webfont.woff2") format("woff2"), url("../fonts/readery_slab_regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: 'readery';
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: 0.2em;
+    text-align: center;
+    /* opacity .8 */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - magrins should be symmetric */
+    /* remove if not needed */
+    margin-left: 0.2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-star:before {
+    content: '\2605';
+}
+
+
+/* '★' */
+
+.icon-ok:before {
+    content: '\2713';
+}
+
+
+/* '✓' */
+
+.icon-delete:before {
+    content: '\2715';
+}
+
+
+/* '✕' */
+
+.icon-help:before {
+    content: '\e704';
+}
+
+
+/* '' */
+
+.icon-cart:before {
+    content: '\e800';
+}
+
+
+/* '' */
+
+.icon-menu:before {
+    content: '\f0c9';
+}
+
+
+/* '' */
+
+.icon-twitter:before {
+    content: '\f309';
+}
+
+
+/* '' */
+
+.icon-facebook:before {
+    content: '\f30e';
+}
+
+
+/* '' */
+
+.icon-instagram:before {
+    content: '\f32d';
+}
+
+
+/* '' */
+
+.icon-user:before {
+    content: '👤';
+}
+
+
+/* '\1f464' */
+
+.icon-credit:before {
+    content: '💳';
+}
+
+
+/* '\1f4b3' */
+
+.icon-search:before {
+    content: '🔍';
+}
+
+
+/* '\1f50d' */
+
+#navigation .cart {
+    position: relative;
+}
+
+#navigation .cart .item-count {
+    position: absolute;
+    display: block;
+    top: -6px;
+    right: -14px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-family: "readery_slab_loop", sans-serif;
+    background: #E4343A;
+    border-radius: 50%;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+#navigation .cart .total,
+#navigation .cart .item-count-noun {
+    display: none;
+}
+
+button,
+.button {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    padding: 0 0.5em;
+    background-color: #2C3E50;
+    border: 1px solid #2C3E50;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    font-weight: bold;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+#navigation .form-search {
+    position: relative;
+}
+
+#navigation .form-search input[type=text] {
+    padding: 0 0.5em;
+    line-height: 36px !important;
+    height: 36px !important;
+    border: none;
+    background: #fff;
+    top: 1px !important;
+    font-size: 1em;
+    font-weight: normal;
+    color: #000;
+    float: left;
+}
+
+#navigation .form-search button {
+    float: left;
+    background: 0;
+    padding: 0 5px;
+    line-height: 36px !important;
+    height: 36px !important;
+    color: #000;
+    border: none;
+    position: absolute;
+    top: 1px !important;
+    right: 0;
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+    background-color: #34495E;
+    border: 1px solid #34495E;
+}
+
+button:active,
+.button:active {
+    background-color: #2C3E50;
+    border: 1px solid #2C3E50;
+}
+
+button.disabled,
+button[disabled],
+.button.disabled,
+.button[disabled],
+button.disabled:hover,
+button.disabled:focus,
+button[disabled]:hover,
+button[disabled]:focus,
+.button.disabled:hover,
+.button.disabled:focus,
+.button[disabled]:hover,
+.button[disabled]:focus {
+    background-color: #2C3E50;
+    border: 1px solid #2C3E50;
+}
+
+button.red,
+.button.red,
+button.red:active,
+.button.red:active {
+    background-color: #E4343A;
+    border: 1px solid #E4343A;
+}
+
+button.red:hover,
+.button.red:hover,
+button.red:focus,
+.button.red:focus {
+    background-color: #000000;
+    border: 1px solid #000000;
+}
