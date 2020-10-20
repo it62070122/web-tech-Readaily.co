@@ -126,18 +126,26 @@
 </head>
 
 <body>
+
+    <!-- Navbar Black (main) -->
     <nav class="navbar navbar-expand-lg text-white " style="background-color: black; padding: 3px 1.2em 3px 1.2em;" id="navigation">
         <div class="container">
+
+            <!-- Logo Readery -->
             <a class="navbar-brand mr-5 mt-3 mb-3" href="#"><img src="../images/favicons/logo-white.svg" width="172"></a>
+            <!-- Toggle Hamburger in navbar black -->
             <a class="navbar-toggler toggler-example text-white" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation" href="#" id="toggle"><i class="fa fa-bars"></i></a>
 
+            <!-- collapse in navbar (คลาส collapse ไว้รวมเมนูต่างๆ ให้อยู่ใน hamburger เวลาที่ถูกย่อจอ) -->
             <div class="collapse navbar-collapse m-auto collapse-menu" id="navbarSupportedContent1">
+                <!-- แถบ search -->
                 <ul class="navbar-nav mr-auto mb-3">
                     <div class="form-search nav-item" id="search">
                         <input class="form-control" type="search" aria-label="Search">
                         <button type="submit" title="ค้นหา" class="button nav-item nav-link"><i class="icon-search"></i></button>
                     </div>
                 </ul>
+                <!-- เมนูริมขวา -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item mr-3 mb-3"><a class="nav-link text-white" href="#" id="link1">แจ้งโอนเงิน</a></li>
                     <li class="nav-item mr-3 mb-3"><a class="nav-link text-white" href="#" id="link2">วิธีชำระเงิน</a></li>
@@ -149,12 +157,15 @@
             </div>
         </div>
     </nav>
+    <!-- End Navbar Black (main) -->
 
+    <!-- Navbar (แถบล่าง main) -->
     <nav class="navbar navbar-light mb-1" style="padding: 0em 1.2em 0.9em 1.2em; background-color: white;">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <ul class="nav mr-auto" style="padding: 0.3em 0em 0em 0em;">
+                        <!-- Hamburger button -->
                         <li class="nav-item">
                             <div class="block mr-3 mt-3" onclick="myFunction(this)" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <div class="bar1"></div>
@@ -166,8 +177,8 @@
                                     x.classList.toggle("change");
                                 }
                             </script>
-
                         </li>
+                        <!-- แถบข้างๆ Hamburger -->
                         <li class="nav-item">
                             <a class="tag-label mt-3 mr-3" href="#">New Arrivals</a>
                         </li>
@@ -188,12 +199,11 @@
             </div>
         </div>
     </nav>
+    <!-- End Navbar (แถบล่าง main) -->
 
     <hr style="border-top: 1px solid#f0f0f0; margin: 0;">
 
-    <style>
-
-    </style>
+    <!-- list หมวดหนังสือ เมื่อกด Hamburger button -->
     <div class="collapse collapsing" id="collapseExample" style="background-color: #f0f0f0;">
         <div class="container">
             <div class="row mr-3 ml-3">
@@ -318,7 +328,7 @@
             </div>
         </div>
     </div>
-
+    <!-- list หมวดหนังสือ เมื่อกด Hamburger button -->
 </body>
 
 </html>
