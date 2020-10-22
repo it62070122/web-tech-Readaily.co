@@ -7,35 +7,36 @@
 </head>
 
 <body>
-    <!-- Head -->
-    <?php include "asset/head.html"?>
-    <!--NavBar-->
-    <?php include "asset/navbar.html"?>
+    <?php 
+    // Head 
+    include "asset/head.html";
+    // NavBar
+    include "asset/navbar.html";
 
-    <!-- Content -->
-        <!-- So hot right now -->
-        <?php include "asset/index/so-hot-right-now.html"?>
-        <!-- Pre order -->
-        <?php include "asset/index/pre-order.html"?>
-        <!-- New Arrivals - Fiction -->
-        <?php include "asset/index/new-arrivals-fiction.html"?>
-        <!-- วรรณกรรมญี่ปุ่น -->
-        <?php include "asset/index/japanese-literature.html"?>
-        <!-- วรรณกรรมแปล -->
-        <?php include "asset/index/fiction-novel.html"?>
-        <!-- New Arrivals - Thai Fiction -->
-        <?php include "asset/index/new-arrivals-thai-fiction.html"?>
-        <!-- Non-Fiction: Bestsellers -->
-        <?php include "asset/index/non-fiction-bestsellers.html"?>
-        <!-- New Arrivals - Non-Fiction -->
-        <?php include "asset/index/new-arrivals-non-fiction.html"?>
-    <!-- End content -->
+    /* Content */
+        // So hot right now 
+        include "asset/index/so-hot-right-now.html";
+        // Pre order 
+        include "asset/index/pre-order.html";
+        // New Arrivals - Fiction 
+        include "asset/index/new-arrivals-fiction.html";
+        // วรรณกรรมญี่ปุ่น
+        include "asset/index/japanese-literature.html";
+        // วรรณกรรมแปล
+        include "asset/index/fiction-novel.html";
+        // New Arrivals - Thai Fiction
+        include "asset/index/new-arrivals-thai-fiction.html";
+        // Non-Fiction: Bestsellers
+        include "asset/index/non-fiction-bestsellers.html";
+        // New Arrivals - Non-Fiction
+        include "asset/index/new-arrivals-non-fiction.html";
+    /* End content */
 
-    <!-- Category box -->
-    <?php include "asset/categorybox.html"?>
-    <!-- Top button -->
-    <?php include "asset/backtotop.html"?>
-    <!-- Footer -->
-    <?php include "asset/footer.html"?>
+    // Category box 
+    include "asset/categorybox.html";
+    // Top button
+    include "asset/backtotop.html";
+    // Footer
+    include "asset/footer.html";?>
 </body>
 </html>

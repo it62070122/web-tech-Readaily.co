@@ -264,3 +264,8 @@ button.red:focus,
 .padding-content {
     padding: 7vh 7.5vw 7vh 7.5vw;
 }
+
+::selection {
+    color: #fff;
+    background: #E43439;
+}
