@@ -1,134 +1,115 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readery ร้านหนังสือออนไลน์ รี้ดเดอรี่</title>
-    <meta name="description" content="ร้านหนังสือออนไลน์ จัดส่งทางไปรษณีย์ทั่วประเทศ" />
-    <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
-
-    <!-- Style sheets -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: 'readery_slab_loop';
-        }
-        
-        .nav-link,
-        .nav-link:hover {
-            color: white;
-            font-family: 'readery_slab_bold';
-        }
-        
-        .form-control,
-        .form-control:focus {
-            height: calc(1.5rem + .7rem + 2px);
-            border-radius: 0rem;
-            color: #000;
-            border: 1px solid #000;
-            border-color: #000;
-            outline: 0;
-            box-shadow: 0 0 0 0
-        }
-        
-        a #toggle:active {
-            color: grey;
-        }
-        
-        .collapsing {
-            transition: height .8s ease, padding-top .8s ease;
-            padding-top: 0.8em;
-        }
-        
-        .collapse {
-            transition: height .8s ease, padding-top .8s ease;
-            padding-top: 1.5em;
-        }
-        
-        .collapse-menu {
-            transition: none;
-        }
-        
-        .tag-label {
-            font-family: 'readery_slab_bold';
-            border: 2px solid black;
-            padding: 3px 8px;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: baseline;
-            display: inline-block;
-            font-size: 1em;
-            color: black;
-        }
-        
-        .tag-label:hover {
-            color: white;
-            background-color: black;
-        }
-        
-        a,
-        a:active,
-        a:hover {
-            text-decoration: none;
-        }
-        
-        .block {
-            display: inline-block;
-            cursor: pointer;
-        }
-        
-        .bar1,
-        .bar2,
-        .bar3 {
-            width: 40px;
-            height: 4px;
-            background-color: #333;
-            margin: 6px 0;
-            border-radius: 50px;
-        }
-        
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-            transform: rotate(-45deg) translate(-6px, 6px);
-        }
-        
-        .change .bar2 {
-            opacity: 0;
-        }
-        
-        .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-9px, -8px);
-            transform: rotate(45deg) translate(-9px, -8px);
-        }
-        
-        .h5-title {
-            font-family: 'readery_slab_bold';
-            font-size: 1.1em;
-        }
-        
-        #categories {
-            font-family: 'readery_slab_loop';
-            font-size: 1em;
-            color: black;
-        }
-        
-        #categories:hover {
-            text-decoration: underline;
-        }
-    </style>
-
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
+<style>
+    body {
+        font-family: 'readery_slab_loop';
+    }
+    
+    .nav-link,
+    .nav-link:hover {
+        color: white;
+        font-family: 'readery_slab_bold';
+    }
+    
+    .form-control,
+    .form-control:focus {
+        height: calc(1.5rem + .7rem + 2px);
+        border-radius: 0rem;
+        color: #000;
+        border: 1px solid #000;
+        border-color: #000;
+        outline: 0;
+        box-shadow: 0 0 0 0
+    }
+    
+    a #toggle:active {
+        color: grey;
+    }
+    
+    .collapsing {
+        transition: height .8s ease, padding-top .8s ease;
+        padding-top: 0.8em;
+    }
+    
+    .collapse {
+        transition: height .8s ease, padding-top .8s ease;
+        padding-top: 1.5em;
+    }
+    
+    .collapse-menu {
+        transition: none;
+    }
+    
+    .tag-label {
+        font-family: 'readery_slab_bold';
+        border: 2px solid black;
+        padding: 3px 8px;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        display: inline-block;
+        font-size: 1em;
+        color: black;
+    }
+    
+    .tag-label:hover {
+        color: white;
+        background-color: black;
+    }
+    
+    a,
+    a:active,
+    a:hover {
+        text-decoration: none;
+    }
+    
+    .block {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 40px;
+        height: 4px;
+        background-color: #333;
+        margin: 6px 0;
+        border-radius: 50px;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-9px, -8px);
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+    
+    .h5-title {
+        font-family: 'readery_slab_bold';
+        font-size: 1.1em;
+    }
+    
+    #categories {
+        font-family: 'readery_slab_loop';
+        font-size: 1em;
+        color: black;
+    }
+    
+    #categories:hover {
+        text-decoration: underline;
+    }
+</style>
 
 <body>
 
     <!-- Navbar Black (main) -->
-    <nav class="navbar navbar-expand-lg text-white " style="background-color: black; padding: 3px 1.2em 3px 1.2em;" id="navigation">
+    <nav class="navbar navbar-expand-lg text-white " style="background-color: black; padding: 3px 0px;" id="navigation">
         <div class="container">
 
             <!-- Logo Readery -->
@@ -160,42 +141,40 @@
     <!-- End Navbar Black (main) -->
 
     <!-- Navbar (แถบล่าง main) -->
-    <nav class="navbar navbar-light mb-1" style="padding: 0em 1.2em 0.9em 1.2em; background-color: white;">
+    <nav class="navbar navbar-light" style="background-color: white;">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <ul class="nav mr-auto" style="padding: 0.3em 0em 0em 0em;">
-                        <!-- Hamburger button -->
-                        <li class="nav-item">
-                            <div class="block mr-3 mt-3" onclick="myFunction(this)" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <div class="bar1"></div>
-                                <div class="bar2"></div>
-                                <div class="bar3"></div>
-                            </div>
-                            <script>
-                                function myFunction(x) {
-                                    x.classList.toggle("change");
-                                }
-                            </script>
-                        </li>
-                        <!-- แถบข้างๆ Hamburger -->
-                        <li class="nav-item">
-                            <a class="tag-label mt-3 mr-3" href="#">New Arrivals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="tag-label mt-3 mr-3" href="#">Best Sellers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="tag-label mt-3 mr-3" href="#">Readery Podcast</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="tag-label mt-3 mr-3" href="#">ความน่าจะอ่าน 2020</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="tag-label mt-3 mr-3" href="#">SALE</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="row pb-2">
+                <ul class="nav mr-auto" style="padding-top: 2px;">
+                    <!-- Hamburger button -->
+                    <li class="nav-item">
+                        <div class="block mr-3 mt-3" onclick="myFunction(this)" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <script>
+                            function myFunction(x) {
+                                x.classList.toggle("change");
+                            }
+                        </script>
+                    </li>
+                    <!-- แถบข้างๆ Hamburger -->
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">Readery Podcast</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">ความน่าจะอ่าน 2020</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">SALE</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -206,7 +185,7 @@
     <!-- list หมวดหนังสือ เมื่อกด Hamburger button -->
     <div class="collapse collapsing" id="collapseExample" style="background-color: #f0f0f0;">
         <div class="container">
-            <div class="row mr-3 ml-3">
+            <div class="row mr-1 ml-1">
 
                 <!-- Column 1 -->
                 <div class="col-6 col-md-3">
@@ -329,6 +308,3 @@
         </div>
     </div>
     <!-- list หมวดหนังสือ เมื่อกด Hamburger button -->
-</body>
-
-</html>
