@@ -269,3 +269,46 @@ button.red:focus,
     color: #fff;
     background: #E43439;
 }
+
+.thainame {
+    font-family: "readery_slab_bold", sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.artist {
+    font-family: "readery_slab_regular", sans-serif;
+    font-size: 1em;
+    color: #666666;
+}
+
+.price-red {
+    font-family: "readery_slab_loop", sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #e4343a;
+}
+
+.price-grey {
+    font-family: "readery_slab_loop", sans-serif;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+
+.card-img-top {
+    border: 1px solid #f0f0f0;
+}
+
+#book-title,
+a:hover,
+a {
+    color: black;
+}
+
+#book-author,
+a:hover,
+a {
+    color: #666666;
+}
