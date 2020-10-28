@@ -15,9 +15,9 @@
 
     /* Content */
         // So hot right now 
-        include "asset/index/so-hot-right-now.html";
+        include "asset/index/so-hot-right-now.php";
         // Pre order 
-        include "asset/index/pre-order.html";
+        include "asset/index/pre-order.php";
         // New Arrivals - Fiction 
         include "asset/index/new-arrivals-fiction.html";
         // วรรณกรรมญี่ปุ่น
