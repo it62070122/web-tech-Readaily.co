@@ -312,3 +312,25 @@ a:hover,
 a {
     color: #666666;
 }
+
+.new-release {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background: url(../images/favicons/new-release.png) no-repeat center center;
+    background-size: 52px 52px;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+}
+
+.pre-order {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background: url(../images/favicons/pre-order.png) no-repeat center center;
+    background-size: 52px 52px;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+}
