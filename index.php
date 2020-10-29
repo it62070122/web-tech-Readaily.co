@@ -19,7 +19,7 @@
         // Pre order 
         include "asset/index/pre-order.php";
         // New Arrivals - Fiction 
-        include "asset/index/new-arrivals-fiction.html";
+        include "asset/index/new-arrivals-fiction.php";
         // วรรณกรรมญี่ปุ่น
         include "asset/index/japanese-literature.html";
         // วรรณกรรมแปล

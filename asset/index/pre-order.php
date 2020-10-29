@@ -20,6 +20,17 @@
                 echo "<div class=\"col-6 col-md \" id=\"books\">";
                 echo "<div class=\"card\" style=\"border: none; text-align: center; padding: 2vh; background: #F4F5F6\">";
                 echo "<img class=\"img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/pre-order/".$result[$i]->img."\" height=\"130\">";
+                
+                if($result[$i]->covertag[0] == "new release"){
+                    echo "<div class=\"new-release\"></div>";
+                }
+                else if($result[$i]->covertag[0] == "Pre-Order"){
+                    echo "<div class=\"pre-order\"></div>";
+                }
+                else{
+                    continue;
+                }
+                
                 echo "<a class=\"thainame mb-1 text-decoration-none\" href=\"\" id=\"book-title\">";
                 echo $result[$i]->thainame;
                 echo "</a>";
