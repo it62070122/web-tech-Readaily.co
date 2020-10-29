@@ -31,10 +31,10 @@
             echo "<div class=\"col-6 col-md \" id=\"books\">";
             echo "<div class=\"card\" style=\"border: none; text-align: center; padding: 2vh;\">";
             echo "<img class=\"img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/so-hot-right-now/".$result[$i]->img."\" height=\"130\">";
-            echo "<a class=\"thainame mb-1\" href=\"\" id=\"a-books\">";
+            echo "<a class=\"thainame mb-1 text-decoration-none\" href=\"\" id=\"book-title\">";
             echo $result[$i]->thainame;
             echo "</a>";
-            echo "<a class=\"artist mb-1\" href=\"\" id=\"a-books\">";
+            echo "<a class=\"artist mb-1 text-decoration-none\" href=\"\" id=\"book-author\">";
             echo $result[$i]->artist;
             echo "</a>";
             echo "<p>";
