@@ -54,7 +54,7 @@
             echo "฿".number_format($result[$i]->cost, 2, '.', '');
             echo "</span>";
             echo "<span class=\"price-red\">";
-            echo " ฿".$result[$i]->cost*(100.00 - $result[$i]->discount);
+            echo " ฿".number_format(($result[$i]->cost*(100 - $result[$i]->discount))/100, 2, '.', '');
             echo "</span></p></div></div>";
         }
         ?>
