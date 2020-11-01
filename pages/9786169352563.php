@@ -1,10 +1,19 @@
+<?php
+    $url = "../asset/json/so-hot-right-now.json";    
+    $response = file_get_contents($url);
+    $result = json_decode($response); 
+?>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
+    <title><?php echo $result[0]->thainame.": ".$result[0]->artist.": ".$result[0]->key ?></title>
+    <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
 </head>
+
+<body>
 
 <?php 
     // Head 
@@ -13,48 +22,50 @@
     include "../asset/navbar.html";
 ?>
 
-<body>
-    <div class="row no-gutters padding-content">
-            <div class="col-md-5">
-                <?php
-                    $url = "../asset/json/so-hot-right-now.json";    
-                    $response = file_get_contents($url);
-                    $result = json_decode($response);     
-                    echo "ข้อมูลหนังสือ<br><br>";
+    <!-- Content  -->
+        <div class="row no-gutters" style="padding: 7vh 7.2vw 7vh 7.2vw;">
+            <!-- ข้อมูลหนังสือ -->
+            <div class="col-md-5 col-12 p-1">
+                <?php    
+                    echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
+                    echo "<div class=\"detail\">";
                     if($result[0]->thainame != null){
-                        echo $result[0]->thainame."<br>";
+                        echo "<b>".$result[0]->thainame."</b><br>";
                     }
                     if($result[0]->name != null){
-                        echo "แปลจากหนังสือ: ".$result[0]->name."<br>";
+                        echo "แปลจากหนังสือ: <b>".$result[0]->name."</b><br>";
                     }
                     echo"ผู้เขียน: ";
-                    echo "<a href=\"\">";
+                    echo "<a href=\"\"><b>";
                     echo $result[0]->artist;
-                    echo "</a><br>";
+                    echo "</b></a><br>";
                     if($result[0]->translater != null){
                         echo "ผู้แปล: ";
-                        echo "<a href=\"\">";
+                        echo "<a href=\"\"><b>";
                         echo $result[0]->translater;
-                        echo "</a><br>";
+                        echo "</b></a><br>";
                     }
                     if($result[0]->coverdesigner != null){
                         echo "ออกแบบปก: ";
-                        echo "<a href=\"\">";
+                        echo "<a href=\"\"><b>";
                         echo $result[0]->coverdesigner;
-                        echo "</a><br>";
+                        echo "</b></a><br>";
                     }
                     if($result[0]->publicher != null){
                         echo "สำนักพิมพ์: ";
-                        echo "<a href=\"\">";
+                        echo "<a href=\"\"><b>";
                         echo $result[0]->publicher;
-                        echo "</a><br>";
+                        echo "</b></a><br>";
                     }
                     echo "จำนวนหน้า: ".$result[0]->pages." หน้า ".$result[0]->bookcover."<br>";
-                    echo "พิมพ์ครั้งที่ ".$result[0]->repub."— ".$result[0]->date."<br>";
+                    echo "พิมพ์ครั้งที่ ".$result[0]->repub." — ".$result[0]->date."<br>";
                     echo "ISBN: ".$result[0]->key;
+                    echo "</div>";
                 ?>
             </div>
-            <div class="col-md-7">
+
+            <!-- เรื่องย่อ -->
+            <div class="col-md-7 col-12 p-1 synopsis">
                 <?php
                     $check = 0;
                     $check2 = 0;
@@ -88,5 +99,11 @@
             </div>
         </div>
 
+<?php 
+    // Top button
+    include "../asset/backtotop.html";
+    // Footer
+    include "../asset/footer.html";
+?>
 </body>
 </html>
