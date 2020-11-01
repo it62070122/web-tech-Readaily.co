@@ -111,6 +111,8 @@
         </div>
 
 <?php 
+    // Sugggestion
+    include "../asset/suggestion.php";
     // Top button
     include "../asset/backtotop.html";
     // Footer
