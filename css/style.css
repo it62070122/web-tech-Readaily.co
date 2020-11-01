@@ -334,3 +334,11 @@ a {
     left: -20px;
     top: 20px;
 }
+
+.detail {
+    font-size: 0.9em;
+}
+
+.synopsis {
+    font-size: 1.1em;
+}
