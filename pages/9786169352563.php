@@ -71,34 +71,30 @@
                     $check2 = 0;
                     for($i=0;$i<sizeof($result[0]->description);$i++){
                         $check = strpos($result[0]->description[$i],"nah");
-                        // $check2 = strpos($result[0]->description[$i],"new1");//สำหรับเว้น1บรรทัดหลัง
-                        $check3 = strpos($result[0]->description[$i],"new2");//สำหรับเว้น2บรรทัดหลังตัวหนา
-                        $check4 = strpos($result[0]->description[$i],"none");//สำหรับไม่เว้นเลย
+                        $check2 = strpos($result[0]->description[$i],"new");//สำหรับเว้น2บรรทัดหลังตัวหนา
+                        $check3 = strpos($result[0]->description[$i],"none");//สำหรับไม่เว้นเลย
                         if($check !== FALSE){
-                            // if($check2 !== FALSE){ 
-                            //     $word = str_replace("nah","",$result[0]->description[$i]);
-                            //     echo "<b>".str_replace("new1","",$word)."</b><br>";//กรณีถ้าตัวหนาแล้วเว้น1บรรทัด
-                            // }
-                            // else
-                            if($check3 !== FALSE){ 
+                            if($check2 !== FALSE){ 
                                 $word = str_replace("nah","",$result[0]->description[$i]);
-                                echo "<b>".str_replace("new2","",$word)."</b><br><br>";//กรณีถ้าตัวหนาแล้วเว้น2บรรทัด
+                                echo "<b>".str_replace("new","",$word)."</b><br><br>";//กรณีถ้าตัวหนาแล้วเว้น2บรรทัด
+                            }
+                            elseif($check3 !== FALSE){ 
+                                $word = str_replace("nah","",$result[0]->description[$i]);
+                                echo "<b>".str_replace("none","",$word)."</b>";//กรณีถ้าตัวหนาแล้วไม่เว้นบรรทัด
                             }
                             else{
-                                echo "<b>".str_replace("nah","",$result[0]->description[$i])."</b>";//กรณีถ้าตัวหนาไม่เว้นบรรทัด
+                                echo "<b>".str_replace("nah","",$result[0]->description[$i])."</b><br>";//กรณีถ้าตัวหนาไม่เว้นบรรทัด
                             }    
                         }
                         else{
-                            // if($check2 !== FALSE){ 
-                            //     echo str_replace("new1","",$result[0]->description[$i]."<br>");//กรณีเว้นบรรทัด1
-                            // }
-
-                            // else 
-                            if($check4 !== FALSE){ 
+                            if($check2 !== FALSE){ 
+                                echo str_replace("new","",$result[0]->description[$i])."<br><br>";//กรณีเว้น2บรรทัด
+                            }
+                            else if($check3 !== FALSE){ 
                                 echo str_replace("none","",$result[0]->description[$i]);//กรณีไม่เว้นบรรทัด
                             }
                             else{
-                                echo $result[0]->description[$i]."<br><br>";//กรณีเว้น2บรรทัด
+                                echo $result[0]->description[$i]."<br>";//กรณีเว้น2บรรทัด
                             }    
                         }    
                     }
