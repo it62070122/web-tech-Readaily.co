@@ -91,7 +91,28 @@
             </div>
             </div>
             </div>
-        </div>'; 
+        </div><br><br>'; 
+        
+        //  review
+    if ($result[0]->review == null){
+        ;
+    }
+    else{
+        echo '<div class="row">';
+        for ( $i=0; $i<sizeof($result[0]->review); $i++){
+            echo '<p style="font-size:20px">'.$result[0]->review[$i].'</p>';
+        }
+        echo '</div>';
+    }
+    
+    //reviewer
+    if ($result[0]->reviewer == null){
+        ;
+    }
+    else{
+        echo '<div class="row">
+        <p style="font-size:20px"><b>- '.$result[0]->reviewer.'</b></p></div>';
+    }  
     ?>
     
     </div>
