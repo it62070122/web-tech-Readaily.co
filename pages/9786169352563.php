@@ -1,5 +1,5 @@
 <?php
-    $url = "../asset/json/pre-order.json";    
+    $url = "../asset/json/so-hot-right-now.json";    
     $response = file_get_contents($url);
     $result = json_decode($response); 
 ?>
@@ -9,11 +9,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php if($result[3]->thainame != null){
-        echo $result[3]->thainame.": ".$result[3]->artist.": ".$result[3]->key;
+    <title><?php if($result[0]->thainame != null){
+        echo $result[0]->thainame.": ".$result[0]->artist.": ".$result[0]->key;
     }
     else{
-        echo $result[3]->name.": ".$result[3]->artist.": ".$result[3]->key;
+        echo $result[0]->name.": ".$result[0]->artist.": ".$result[0]->key;
     } ?>
     </title>
     <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
@@ -36,44 +36,44 @@
                 <?php    
                     echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
                     echo "<div class=\"detail\">";
-                    if($result[3]->name != null){
-                            if($result[3]->thainame != null){
-                                echo "<b>".$result[3]->thainame."</b><br>";     
-                                echo "แปลจากหนังสือ: <b>".$result[3]->name."</b><br>";
+                    if($result[0]->name != null){
+                            if($result[0]->thainame != null){
+                                echo "<b>".$result[0]->thainame."</b><br>";     
+                                echo "แปลจากหนังสือ: <b>".$result[0]->name."</b><br>";
                             }
                             else{
-                                echo "<b>".$result[3]->name."</b><br>";
+                                echo "<b>".$result[0]->name."</b><br>";
                             }    
                         }
                     else{
-                        echo "<b>".$result[3]->thainame."</b><br>";
+                        echo "<b>".$result[0]->thainame."</b><br>";
                     }
                     
                     echo"ผู้เขียน: ";
                     echo "<a href=\"\"><b>";
-                    echo $result[3]->artist;
+                    echo $result[0]->artist;
                     echo "</b></a><br>";
-                    if($result[3]->translater != null){
+                    if($result[0]->translater != null){
                         echo "ผู้แปล: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[3]->translater;
+                        echo $result[0]->translater;
                         echo "</b></a><br>";
                     }
-                    if($result[3]->coverdesigner != null){
+                    if($result[0]->coverdesigner != null){
                         echo "ออกแบบปก: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[3]->coverdesigner;
+                        echo $result[0]->coverdesigner;
                         echo "</b></a><br>";
                     }
-                    if($result[3]->publicher != null){
+                    if($result[0]->publicher != null){
                         echo "สำนักพิมพ์: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[3]->publicher;
+                        echo $result[0]->publicher;
                         echo "</b></a><br>";
                     }
-                    echo "จำนวนหน้า: ".$result[3]->pages." หน้า ".$result[3]->bookcover."<br>";
-                    echo "พิมพ์ครั้งที่ ".$result[3]->repub." — ".$result[3]->date."<br>";
-                    echo "ISBN: ".$result[3]->key;
+                    echo "จำนวนหน้า: ".$result[0]->pages." หน้า ".$result[0]->bookcover."<br>";
+                    echo "พิมพ์ครั้งที่ ".$result[0]->repub." — ".$result[0]->date."<br>";
+                    echo "ISBN: ".$result[0]->key;
                     echo "</div>";
                 ?>
             </div>
@@ -83,11 +83,11 @@
                     
                 <?php
                   
-                    for($i=0;$i<sizeof($result[3]->description);$i++){
-                            echo $result[3]->description[$i]."<br><br>";
+                    for($i=0;$i<sizeof($result[0]->description);$i++){
+                            echo $result[0]->description[$i]."<br><br>";
                 }
-                if($result[3]->credit != null){
-                    echo "<b>-".$result[3]->credit."</b>";
+                if($result[0]->credit != null){
+                    echo "<b>-".$result[0]->credit."</b>";
                 }
                 ?>
             </div>
