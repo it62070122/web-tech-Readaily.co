@@ -10,7 +10,7 @@
 <body>
     <?php 
     // Head 
-    include "asset/head.html";
+    //include "asset/head.html";
     // NavBar
     include "asset/navbar.html";
 
