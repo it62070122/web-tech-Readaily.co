@@ -9,7 +9,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $result[1]->thainame.": ".$result[1]->artist.": ".$result[1]->key ?></title>
+    <title><?php if($result[3]->thainame != null){
+        echo $result[3]->thainame.": ".$result[3]->artist.": ".$result[3]->key;
+    }
+    else{
+        echo $result[3]->name.": ".$result[3]->artist.": ".$result[3]->key;
+    } ?>
+    </title>
     <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
     
 </head>
@@ -30,37 +36,44 @@
                 <?php    
                     echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
                     echo "<div class=\"detail\">";
-                    if($result[1]->thainame != null){
-                        echo "<b>".$result[1]->thainame."</b><br>";
+                    if($result[3]->name != null){
+                            if($result[3]->thainame != null){
+                                echo "<b>".$result[3]->thainame."</b><br>";     
+                                echo "แปลจากหนังสือ: <b>".$result[3]->name."</b><br>";
+                            }
+                            else{
+                                echo "<b>".$result[3]->name."</b><br>";
+                            }    
+                        }
+                    else{
+                        echo "<b>".$result[3]->thainame."</b><br>";
                     }
-                    if($result[1]->name != null){
-                        echo "แปลจากหนังสือ: <b>".$result[1]->name."</b><br>";
-                    }
+                    
                     echo"ผู้เขียน: ";
                     echo "<a href=\"\"><b>";
-                    echo $result[1]->artist;
+                    echo $result[3]->artist;
                     echo "</b></a><br>";
-                    if($result[1]->translater != null){
+                    if($result[3]->translater != null){
                         echo "ผู้แปล: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[1]->translater;
+                        echo $result[3]->translater;
                         echo "</b></a><br>";
                     }
-                    if($result[1]->coverdesigner != null){
+                    if($result[3]->coverdesigner != null){
                         echo "ออกแบบปก: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[1]->coverdesigner;
+                        echo $result[3]->coverdesigner;
                         echo "</b></a><br>";
                     }
-                    if($result[1]->publicher != null){
+                    if($result[3]->publicher != null){
                         echo "สำนักพิมพ์: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[1]->publicher;
+                        echo $result[3]->publicher;
                         echo "</b></a><br>";
                     }
-                    echo "จำนวนหน้า: ".$result[1]->pages." หน้า ".$result[1]->bookcover."<br>";
-                    echo "พิมพ์ครั้งที่ ".$result[1]->repub." — ".$result[1]->date."<br>";
-                    echo "ISBN: ".$result[1]->key;
+                    echo "จำนวนหน้า: ".$result[3]->pages." หน้า ".$result[3]->bookcover."<br>";
+                    echo "พิมพ์ครั้งที่ ".$result[3]->repub." — ".$result[3]->date."<br>";
+                    echo "ISBN: ".$result[3]->key;
                     echo "</div>";
                 ?>
             </div>
@@ -70,11 +83,11 @@
                     
                 <?php
                   
-                    for($i=0;$i<sizeof($result[1]->description);$i++){
-                            echo $result[1]->description[$i]."<br><br>";
+                    for($i=0;$i<sizeof($result[3]->description);$i++){
+                            echo $result[3]->description[$i]."<br><br>";
                 }
-                if($result[1]->credit != null){
-                    echo "<b>-".$result[1]->credit."</b>";
+                if($result[3]->credit != null){
+                    echo "<b>-".$result[3]->credit."</b>";
                 }
                 ?>
             </div>
