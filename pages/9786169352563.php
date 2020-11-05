@@ -30,67 +30,73 @@
 ?>
 
     <!-- Content  -->
-        <div class="row no-gutters" style="padding: 7vh 7.2vw 7vh 7.2vw;">
-            <!-- ข้อมูลหนังสือ -->
-            <div class="col-md-5 col-12 p-1">
-                <?php    
-                    echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
-                    echo "<div class=\"detail\">";
-                    if($result[0]->name != null){
-                            if($result[0]->thainame != null){
-                                echo "<b>".$result[0]->thainame."</b><br>";     
-                                echo "แปลจากหนังสือ: <b>".$result[0]->name."</b><br>";
+        <div style="padding: 7vh 7.2vw 7vh 7.2vw;" class="d-flex justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <!-- ข้อมูลหนังสือ -->
+                <div class="col-md-5 col-12 p-1">
+                    <?php    
+                        echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
+                        echo "<div class=\"detail\">";
+                        if($result[0]->name != null){
+                                if($result[0]->thainame != null){
+                                    echo "<b>".$result[0]->thainame."</b><br>";     
+                                    echo "แปลจากหนังสือ: <b>".$result[0]->name."</b><br>";
+                                }
+                                else{
+                                    echo "<b>".$result[0]->name."</b><br>";
+                                }    
                             }
-                            else{
-                                echo "<b>".$result[0]->name."</b><br>";
-                            }    
+                        else{
+                            echo "<b>".$result[0]->thainame."</b><br>";
                         }
-                    else{
-                        echo "<b>".$result[0]->thainame."</b><br>";
-                    }
-                    
-                    echo"ผู้เขียน: ";
-                    echo "<a href=\"\"><b>";
-                    echo $result[0]->artist;
-                    echo "</b></a><br>";
-                    if($result[0]->translater != null){
-                        echo "ผู้แปล: ";
+                        
+                        echo"ผู้เขียน: ";
                         echo "<a href=\"\"><b>";
-                        echo $result[0]->translater;
+                        echo $result[0]->artist;
                         echo "</b></a><br>";
-                    }
-                    if($result[0]->coverdesigner != null){
-                        echo "ออกแบบปก: ";
-                        echo "<a href=\"\"><b>";
-                        echo $result[0]->coverdesigner;
-                        echo "</b></a><br>";
-                    }
-                    if($result[0]->publicher != null){
-                        echo "สำนักพิมพ์: ";
-                        echo "<a href=\"\"><b>";
-                        echo $result[0]->publicher;
-                        echo "</b></a><br>";
-                    }
-                    echo "จำนวนหน้า: ".$result[0]->pages." หน้า ".$result[0]->bookcover."<br>";
-                    echo "พิมพ์ครั้งที่ ".$result[0]->repub." — ".$result[0]->date."<br>";
-                    echo "ISBN: ".$result[0]->key;
-                    echo "</div>";
-                ?>
-            </div>
+                        if($result[0]->translater != null){
+                            echo "ผู้แปล: ";
+                            echo "<a href=\"\"><b>";
+                            echo $result[0]->translater;
+                            echo "</b></a><br>";
+                        }
+                        if($result[0]->coverdesigner != null){
+                            echo "ออกแบบปก: ";
+                            echo "<a href=\"\"><b>";
+                            echo $result[0]->coverdesigner;
+                            echo "</b></a><br>";
+                        }
+                        if($result[0]->publicher != null){
+                            echo "สำนักพิมพ์: ";
+                            echo "<a href=\"\"><b>";
+                            echo $result[0]->publicher;
+                            echo "</b></a><br>";
+                        }
+                        echo "จำนวนหน้า: ".$result[0]->pages." หน้า ".$result[0]->bookcover."<br>";
+                        echo "พิมพ์ครั้งที่ ".$result[0]->repub." — ".$result[0]->date."<br>";
+                        echo "ISBN: ".$result[0]->key;
+                        echo "</div>";
+                    ?>
+                </div>
 
-            <!-- เรื่องย่อ -->
-            <div class="col-md-7 col-12 p-1 synopsis">
+                <!-- เรื่องย่อ -->
+                <div class="col-md-7 col-12 p-1 synopsis">
+                        
+                    <?php
                     
-                <?php
-                  
-                    for($i=0;$i<sizeof($result[0]->description);$i++){
-                            echo $result[0]->description[$i]."<br><br>";
-                }
-                if($result[0]->credit != null){
-                    echo "<b>-".$result[0]->credit."</b>";
-                }
-                ?>
+                        for($i=0;$i<sizeof($result[0]->description);$i++){
+                                echo $result[0]->description[$i]."<br><br>";
+                    }
+                    if($result[0]->credit != null){
+                        echo "<b>-".$result[0]->credit."</b>";
+                    }
+                    ?>
+                </div>
+                </div>
+                
             </div>
+            
         </div>
 
 <?php 
