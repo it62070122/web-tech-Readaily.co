@@ -13,7 +13,8 @@
 
 <div id="pre-order">
     <div class="row no-gutters padding-content">
-        <h2 id="title">เราคิดว่าคุณน่าจะชอบ</h2>
+        <div class="container">
+            <h2 id="title">เราคิดว่าคุณน่าจะชอบ</h2>
         <div class="row align-self-start mt-4">
         <?php 
         for ($i=0; $i<count($result); $i++){
@@ -47,6 +48,8 @@
         }
         ?>
     </div>
+        </div>
+        
     </div>
 </div>
 <hr style="border-top: 1px solid#f0f0f0; margin: 0;">
