@@ -10,9 +10,9 @@
 <body>
     <?php 
     // Head 
-    include "asset/head.html";
+    include "asset/index/head.html";
     // NavBar
-    include "asset/navbar.html";
+    include "asset/index/navbar.html";
 
     /* Content */
         // So hot right now 
