@@ -321,8 +321,8 @@ a {
     background: url(../images/favicons/new-release.png) no-repeat center center;
     background-size: 52px 52px;
     position: absolute;
-    left: -20px;
-    top: 20px;
+    left: -18px;
+    top: 35px;
 }
 
 .pre-order {
@@ -332,8 +332,8 @@ a {
     background: url(../images/favicons/pre-order.png) no-repeat center center;
     background-size: 52px 52px;
     position: absolute;
-    left: -20px;
-    top: 20px;
+    left: -18px;
+    top: 35px;
 }
 
 .detail {
