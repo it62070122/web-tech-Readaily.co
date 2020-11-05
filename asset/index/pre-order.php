@@ -13,14 +13,14 @@
 
 <div id="pre-order">
     <div class="row no-gutters padding-content d-flex justify-content-center">
-        <div class="container">
+        <div class="container p-0">
             <h2 id="title">Pre-Order</h2>
             <div class="row align-self-start mt-4">
                 <?php 
                 for ($i=0; $i<count($result); $i++){
                     echo "<div class=\"col-6 col-md \" id=\"books\">";
                     echo "<div class=\"card\" style=\"border: none; text-align: center; padding: 2vh; background: #F4F5F6\">";
-                    echo "<img class=\"img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/pre-order/".$result[$i]->img."\" height=\"130\">";
+                    echo "<img class=\"card-img-top img-fluid ml-auto mr-auto mb-3 \" src=\"images/cover/pre-order/".$result[$i]->img."\" height=\"130px\">";
                     
                     if($result[$i]->covertag[0] == "new release"){
                         echo "<div class=\"new-release\"></div>";
