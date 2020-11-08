@@ -30,10 +30,97 @@
 ?>
 
     <!-- Content  -->
-        <div style="padding: 7vh 7.2vw 7vh 7.2vw;" class="d-flex justify-content-center">
+        <div style="background: #FAFAFA">
+        <div class="row padding-content d-flex justify-content-center">
+                <div class="container p-0">
+                    <div class="row">
+                        <!-- รูปภาพ -->
+                        <div class="col-md-5">
+                            <img src="../images/cover/so-hot-right-now/<?php echo $result[0]->img; ?>">
+                        </div>
+                        <!-- book detail -->
+                        <div class="col-md-7" style="float:left;">
+                            <?php echo'<div class="row">';
+                            if($result[0]->thainame != null){
+                                echo "<h1><b>".$result[0]->thainame."</b></h1>";
+                            }
+                            echo'</div>';
+                            echo'<div class="row">';
+                            if($result[0]->name != null){
+                            echo '<h4><b>'.$result[0]->name."</b></h4>";
+                            }
+                            echo'</div>';
+                            echo'<div class="row"><h4 style="color:#E54343";><b>'.$result[0]->artist.'</b></h4></div>';
+
+                            if ($result[0]->tag == null){
+                                ;
+                            }
+                            else{
+                            echo '<div class="row">
+                            <h4><b>ซีรี่ส์: <span style="color:#E54343">'.$result[0]->tag[0].'</span></b></h4>
+                            </div>';
+                            }
+
+                            echo'<div class="row" style="padding-top:5vh">
+                                <div class="box p-4">
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                    <h4 style="color:#E54343"><b>'.(($result[0]->cost)-(($result[0]->cost)*(($result[0]->discount)/100))).'</b><span class="text-muted" style="font-size:16px;"> บาท</span></h4>';
+                            echo    '<p class="card-text text-muted">ราคาปก <span><s>'.($result[0]->cost).' บาท</s></span></p>';
+                            echo     '<p class="card-text text-muted">ลด '.($result[0]->cost)*(($result[0]->discount)/100)." บาท (".($result[0]->discount).'%)</p>';
+                            echo    '<li>มีสินค้าพร้อมส่ง</li>';
+                            echo        '</div>
+                                    <div class="col-md-6">
+                                    <select name="number">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    </select>    
+                                    <button  title="เพิ่มในรถเข็น" class="button btn-cart red"><i class="icon-cart"></i> <span>เพิ่มในรถเข็น</span></button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div><br><br>'; 
+                                
+                                //  review
+                            if ($result[0]->review == null){
+                                ;
+                            }
+                            else{
+                                echo '<div class="row">';
+                                for ( $i=0; $i<sizeof($result[0]->review); $i++){
+                                    echo '<p style="font-size:20px">'.$result[0]->review[$i].'</p>';
+                                }
+                                echo '</div>';
+                            }
+                            
+                            //reviewer
+                            if ($result[0]->reviewer == null){
+                                ;
+                            }
+                            else{
+                                echo '<div class="row">
+                                <p style="font-size:20px"><b>- '.$result[0]->reviewer.'</b></p></div>';
+                            }  
+                            ?>
+                        
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+            
+            <!-- ข้อมูลหนังสือ -->
+        <div class="row padding-content d-flex justify-content-center">
             <div class="container">
-                <div class="row">
-                    <!-- ข้อมูลหนังสือ -->
+                <div class="row p-0">
                 <div class="col-md-5 col-12 p-1">
                     <?php    
                         echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
