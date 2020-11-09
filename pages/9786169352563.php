@@ -19,7 +19,22 @@
     <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
     
 </head>
-
+<style>
+    .box{
+        width:90%;
+        background-color:white;
+        border-radius:4px;
+        border:1px solid #D5D8DC;
+    }
+    select {
+        -webkit-appearance: none;
+        width: 40px;
+        padding:5px;
+        border:1px solid #D5D8DC;
+        
+    }  
+    
+</style>
 <body>
 
 <?php 
