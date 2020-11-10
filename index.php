@@ -22,15 +22,15 @@
         // New Arrivals - Fiction 
         include "asset/index/new-arrivals-fiction.php";
         // วรรณกรรมญี่ปุ่น
-        include "asset/index/japanese-literature.html";
+        include "asset/index/japanese-literature.php";
         // วรรณกรรมแปล
-        include "asset/index/fiction-novel.html";
+        include "asset/index/fiction-novel.php";
         // New Arrivals - Thai Fiction
-        include "asset/index/new-arrivals-thai-fiction.html";
+        include "asset/index/new-arrivals-thai-fiction.php";
         // Non-Fiction: Bestsellers
-        include "asset/index/non-fiction-bestsellers.html";
+        include "asset/index/non-fiction-bestsellers.php";
         // New Arrivals - Non-Fiction
-        include "asset/index/new-arrivals-non-fiction.html";
+        include "asset/index/new-arrivals-non-fiction.php";
     /* End content */
 
     // Category box 
@@ -38,6 +38,6 @@
     // Top button
     include "asset/backtotop.html";
     // Footer
-    include "asset/footer.html";?>
+    include "asset/index/footer.html";?>
 </body>
 </html>
