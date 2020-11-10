@@ -343,3 +343,59 @@ a {
 .synopsis {
     font-size: 1.1em;
 }
+
+.title-pay {
+    font-family: "readery_slab_bold", sans-serif;
+    font-size: 2.75em;
+}
+
+.subtitle-pay {
+    font-family: "readery_slab_regular", sans-serif;
+    font-size: 1.5em;
+}
+
+.pay {
+    font-size: 1.125em;
+}
+
+input {
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+    background: #F1F2F2;
+    border: 2px solid #F1F2F2;
+    font-size: 1.125em;
+    margin: 0;
+    box-shadow: none;
+    width: 100%;
+    padding: 0.5em;
+    height: auto;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
