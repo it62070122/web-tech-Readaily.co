@@ -1,5 +1,5 @@
 <?php
-    $url = "../asset/json/so-hot-right-now.json";    
+    $url = "../asset/json/so-hot-right-now.json";    //1. เปลี่ยน json
     $response = file_get_contents($url);
     $result = json_decode($response); 
 ?>
@@ -10,12 +10,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
+            <!-- 2. เปลี่ยนเป็นหนังสือที่ต้องการ บนชื่อเว็บ -->
             <?php if($result[0]->thainame != null){
-        echo $result[0]->thainame.": ".$result[0]->artist.": ".$result[0]->key;
-    }
-    else{
-        echo $result[0]->name.": ".$result[0]->artist.": ".$result[0]->key;
-    } ?>
+                echo $result[0]->thainame.": ".$result[0]->artist.": ".$result[0]->key;
+            }
+            else{
+                echo $result[0]->name.": ".$result[0]->artist.": ".$result[0]->key;
+            } ?>
+            <!-- end 2. เปลี่ยนเป็นหนังสือที่ต้องการ บนชื่อเว็บ -->
         </title>
         <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
 
@@ -87,14 +89,20 @@
                 <div class="container p-0">
                     <div class="row align-self-start mt-4">
                         <!-- รูปภาพ -->
+                        
+                        <!-- 3. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                         <div class="col-md-5 col-12" id="img1">
                             <img src="../images/cover/so-hot-right-now/<?php echo $result[0]->img; ?>">
                         </div>
+                        <!-- end 3. เปลี่ยนเป็นหนังสือที่ต้องการ -->
+
+
                         <!-- book detail -->
                         <div class="col-md-7 col-12" style="float:left;">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row" id="name">
+                                        <!-- 4. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                                         <?php 
                                             if($result[0]->thainame != null){
                                                 echo "<h1 class='title-book'>".$result[0]->thainame."</h1>";
@@ -112,12 +120,16 @@
                                             echo '
                                             <h4><b>ซีรี่ส์: <span style="color:#E54343">'.$result[0]->tag[0].'</span></b></h4>';
                                             } ?>
+                                        <!-- end 4. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                                     </div>
 
                                     <div class="row" id="img2">
+                                        <!-- 5. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                                         <img class="pt-5 pb-2" src="../images/cover/so-hot-right-now/<?php echo $result[0]->img; ?>">
+                                        <!-- end 5. เปลี่ยนเป็นหนังสือที่ต้องการ  -->
                                     </div>
 
+                                    <!-- 6. เปลี่ยนเป็นหนังสือที่ต้องการ  -->
                                     <div class="row" id="box">
                                         <?php echo'
                                             <div class="box p-4" style="margin-top:5vh">
@@ -143,8 +155,11 @@
                                                 <button  title="เพิ่มในรถเข็น" class="button btn-cart red"><i class="icon-cart"></i> <span>เพิ่มในรถเข็น</span></button>
                                                 </div></div>
                                             </div><br><br>'; 
+                                        // end 6. เปลี่ยนเป็นหนังสือที่ต้องการ 
                                             
                                             //  review
+
+                                        // 7. เปลี่ยนเป็นหนังสือที่ต้องการ
                                         if ($result[0]->review == null){
                                             ;
                                         }
@@ -162,6 +177,7 @@
                                             '<p style="font-size:20px"><b>- '.$result[0]->reviewer.'</b></p></div>';
                                         }  
                                         ?>
+                                        <!-- end 7. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                                     </div>
                                 </div>
                                 
@@ -184,6 +200,8 @@
                         <?php    
                             echo "<p class=\"thainame\">ข้อมูลหนังสือ</p>";
                             echo "<div class=\"detail\">";
+
+                            //8. เปลี่ยนเป็นหนังสือที่ต้องการ 
                             if($result[0]->name != null){
                                 if($result[0]->thainame != null){
                                     echo "<b>".$result[0]->thainame."</b><br>";     
@@ -224,12 +242,14 @@
                             echo "ISBN: ".$result[0]->key;
                             echo "</div><br>";
                         ?>
+                        <!-- 8. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                     </div>
+
                     <!-- เรื่องย่อ -->
                     <div class="col-md-7 col-12 name">
                         <div id="detail">
+                            <!-- 9. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                             <?php
-
                             for($i=0;$i<sizeof($result[0]->description);$i++){
                                     echo $result[0]->description[$i]."<br><br>";
                             }
@@ -238,6 +258,7 @@
                             }
                             echo "<br><br>";
                             ?>
+                            <!-- end 9. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                         </div>
                     </div>
                 </div>
