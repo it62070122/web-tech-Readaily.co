@@ -77,7 +77,7 @@
                     <strong>แจ้งการโอนเงิน</strong>
                 </div>
 
-                <div class="form-group" style="background-color: white;">
+                <div class="form-group pl-5 pr-5" style="background-color: white;">
                     <div class="form-title">
                         <br>
                         <h1 class="text-center font-weight-bold title-pay">แจ้งการโอนเงิน</h1>
