@@ -55,6 +55,7 @@
     a.home:hover {
         text-decoration: underline;
     }
+    
 </style>
 
 <body>
@@ -67,10 +68,10 @@
 ?>
 
     <div class="row no-gutters" style="padding: 4.5vh 5.3vw; background-color: #f3f3f3;">
-        <div class="container " style="width: 750px; margin: auto;">
+        <div class="container" style="width: 750px; margin: auto;">
             <div class="row">
-
-                <div class="breadcrumb p-0" style="background-color: #f3f3f3;">
+                <div class="col">
+                    <div class="breadcrumb p-0" style="background-color: #f3f3f3;">
                     <a class="home" href="../index" title="ไปยังหน้าหลัก" style="color: grey;">Home</a>
                     <span style="color: grey;">&nbsp; » &nbsp;</span>
                     <strong>แจ้งการโอนเงิน</strong>
@@ -83,7 +84,7 @@
                         <br>
                     </div>
 
-                    <div class="col align-self-center" style="padding: 3vh 7.5vw">
+                    <div class="col align-self-center" style="padding: 3vh 7vw">
                         <form>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">หมายเลขใบสั่งซื้อ *</label>
@@ -244,6 +245,8 @@
                         <br>
                     </div>
                 </div>
+                </div>
+                
             </div>
         </div>
     </div>
