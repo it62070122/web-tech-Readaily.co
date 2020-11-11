@@ -17,7 +17,7 @@
     <div class="container p-0">
         <div class="row">
             <h2 id="title" class="mr-auto">วรรณกรรมญี่ปุ่น</h2>
-            <a href="" class="more">See more</a>
+            <a href="pages/catagories-japanese-literature.php" class="more">See more</a>
         </div>
         <div class="row align-self-start mt-4">
             <?php 
