@@ -32,7 +32,7 @@
                         continue;
                     }
                     
-                    echo "<a class=\"thainame mb-1 text-decoration-none\" href=\"\" id=\"book-title\">";
+                    echo "<a class=\"thainame mb-1 text-decoration-none\" href='pages/".$result[$i]->key.".php' id=\"book-title\">";
                     echo $result[$i]->thainame;
                     echo "</a>";
                     echo "<a class=\"artist mb-1 text-decoration-none\" href=\"\" id=\"book-author\">";
