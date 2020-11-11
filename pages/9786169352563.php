@@ -9,6 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 2. เปลี่ยนเป็นหนังสือที่ต้องการ บนชื่อเว็บ -->
         <title>
             
             <?php if($result[0]->thainame != null){
@@ -17,8 +18,8 @@
             else{
                 echo $result[0]->name.": ".$result[0]->artist.": ".$result[0]->key;
             } ?>
-            <!-- end 2. เปลี่ยนเป็นหนังสือที่ต้องการ บนชื่อเว็บ -->
         </title>
+        <!-- end 2. เปลี่ยนเป็นหนังสือที่ต้องการ บนชื่อเว็บ -->
         <link rel="icon" href="../images/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
 
     </head>
