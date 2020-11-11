@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            <!-- 2. เปลี่ยนเป็นหนังสือที่ต้องการ บนชื่อเว็บ -->
+            
             <?php if($result[0]->thainame != null){
                 echo $result[0]->thainame.": ".$result[0]->artist.": ".$result[0]->key;
             }
