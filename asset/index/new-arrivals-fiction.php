@@ -32,7 +32,12 @@
             for ($i=0; $i<count($result); $i++){
                 echo "<div class=\"col-6 col-md \" id=\"books\">";
                 echo "<div class=\"card\" style=\"border: none; text-align: center; padding: 2vh;\">";
-                echo "<img class=\"img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/new-arrivals-fiction/".$result[$i]->img."\" height=\"130\">";
+                
+                if ($i < 2){
+                    echo "<a href='pages/".$result[$i]->key.".php'> <img class=\"card-img-top img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/new-arrivals-fiction/".$result[$i]->img."\"></a>";
+                }else{
+                    echo "<a href=''> <img class=\"card-img-top img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/new-arrivals-fiction/".$result[$i]->img."\"></a>";
+                }
 
                 if($result[$i]->covertag[0] == "new release"){
                     echo "<div class=\"new-release\"></div>";
@@ -44,7 +49,12 @@
                     continue;
                 }
 
-                echo "<a class=\"thainame mb-1 text-decoration-none\" href='pages/".$result[$i]->key.".php' id=\"book-title\">";
+                echo "<a class=\"thainame mb-1 text-decoration-none\" ";
+                if ($i < 2){
+                    echo "href='pages/".$result[$i]->key.".php' id=\"book-title\">";
+                }else{
+                    echo "href='' id=\"book-title\">";
+                }
                 echo $result[$i]->thainame;
                 echo "</a>";
                 echo "<a class=\"artist mb-1 text-decoration-none\" href=\"\" id=\"book-author\">";
