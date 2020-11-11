@@ -399,3 +399,28 @@ textarea {
     -o-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 }
+
+.title-book {
+    font-size: 2.5em;
+    font-family: "readery_slab_bold", sans-serif;
+    font-weight: 700;
+}
+
+.subtitle-book {
+    font-family: "readery_slab_bold", sans-serif;
+    font-weight: 700;
+    color: #e54343;
+}
+
+.baht {
+    font-weight: 700;
+    font-size: 0.9375em;
+    color: black;
+    display: inline;
+}
+
+.price {
+    color: #E54343;
+    font-size: 1.875em;
+    font-weight: 700;
+}
