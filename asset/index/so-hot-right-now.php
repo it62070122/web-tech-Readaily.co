@@ -31,7 +31,7 @@
             for ($i=0; $i<count($result); $i++){
                 echo "<div class=\"col-6 col-md\" id=\"books\">";
                 echo "<div class=\"card m-1\" style=\"border: none; text-align: center; padding: 2vh;\">";
-                echo "<img class=\"card-img-top img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/so-hot-right-now/".$result[$i]->img."\" height=\"130px\">";
+                echo "<img class=\"card-img-top img-fluid ml-auto mr-auto mb-3\" src=\"images/cover/so-hot-right-now/".$result[$i]->img."\">";
 
                 if($result[$i]->covertag[0] == "new release"){
                     echo "<div class=\"new-release\"></div>";
