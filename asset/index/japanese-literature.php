@@ -19,7 +19,7 @@
             <h2 id="title" class="mr-auto">วรรณกรรมญี่ปุ่น</h2>
             <a href="" class="more">See more</a>
         </div>
-        <div class="row align-self-start mt-4 d-flex justify-content-center">
+        <div class="row align-self-start mt-4">
             <?php 
             for ($i=0; $i<count($result); $i++){
                 echo "<div class=\"col-6 col-md\" id=\"books\">";
