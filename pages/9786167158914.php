@@ -95,6 +95,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row" id="name">
+                                        <div class="col-12">
                                         <?php 
                                             if($result[0]->thainame != null){
                                                 echo "<h1 class='title-book'>".$result[0]->thainame."</h1>";
@@ -112,6 +113,8 @@
                                             echo '
                                             <h4><b>ซีรี่ส์: <span style="color:#E54343">'.$result[0]->tag[0].'</span></b></h4>';
                                             } ?>
+                                        </div>
+                                        
                                     </div>
 
                                     <div class="row" id="img2">
@@ -124,11 +127,8 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                 <span class="price">'.number_format((($result[0]->cost)-(($result[0]->cost)*(($result[0]->discount)/100))), 2, '.','').'</span><span class="baht"> บาท</span>';
-                                        echo    '<p class="card-text text-muted mb-0">ราคาปก <span><s>'.($result[0]->cost).' บาท</s></span></p>';
-                                        echo     '<p class="card-text text-muted mb-3">ลด '.($result[0]->cost)*(($result[0]->discount)/100)." บาท (".($result[0]->discount).'%)</p>';
-                                        echo    '<h5><b>Pre-Order</b></h5>';
-                                        echo    '<li>จัดส่งประมาณวันที่ <b>'.$result[0]->preOrderDate.'</b></li>';
-                                        echo    '<li>หากสั่งซื้อหนังสือเล่มอื่นๆ พร้อมกับหนังสือ Pre-Order จะจัดส่งพร้อมกันทีเดียวเมื่อหนังสือออกจากโรงพิมพ์ครบแล้วทุกเล่ม</li></div>';
+                                        echo    '<p class="card-text text-555 mb-0">ราคาปก <span><s>'.($result[0]->cost).' บาท</s></span></p>';
+                                        echo     '<p class="card-text text-555 mb-3">ลด '.number_format((($result[0]->cost)*(($result[0]->discount)/100)), 2, '.','')." บาท (".($result[0]->discount).'%)</p></div>';
                                         echo     '<div class="col-md-6">
                                                 <select name="number">
                                                 <option value="1">1</option>
@@ -144,15 +144,20 @@
                                                 </select>    
                                                 <button  title="เพิ่มในรถเข็น" class="button btn-cart red"><i class="icon-cart"></i> <span>เพิ่มในรถเข็น</span></button>
                                                 </div></div>
+                                                <div class="row"><div class="col-12">';
+                                                echo    '<h5 style="color:#E54343 "><b>Pre-Order</b></h5>';
+                                                echo    '<li>จัดส่งประมาณวันที่ <b>'.$result[0]->preOrderDate.'</b></li>';
+                                                echo    '<li>หากสั่งซื้อหนังสือเล่มอื่นๆ พร้อมกับหนังสือ Pre-Order จะจัดส่งพร้อมกันทีเดียวเมื่อหนังสือออกจากโรงพิมพ์ครบแล้วทุกเล่ม</li></div></div>
+                                                </div>
                                             </div><br><br>'; 
                                             
-                                            //  review
+                                        //  review
                                         if ($result[0]->review == null){
                                             ;
                                         }
                                         else{
                                             for ( $i=0; $i<sizeof($result[0]->review); $i++){
-                                                echo '<p style="font-size:20px">'.$result[0]->review[$i].'</p>';
+                                                echo '<p class="review">'.$result[0]->review[$i].'</p>';
                                             }
                                         }
                                         
@@ -161,7 +166,7 @@
                                             ;
                                         }
                                         else{
-                                            '<p style="font-size:20px"><b>- '.$result[0]->reviewer.'</b></p></div>';
+                                            echo '<p class="review"><b>- '.$result[0]->reviewer.'</b></p>';
                                         }  
                                         ?>
                                     </div>

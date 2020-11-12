@@ -131,8 +131,8 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                 <span class="price">'.number_format((($result[1]->cost)-(($result[1]->cost)*(($result[1]->discount)/100))), 2, '.','').'</span><span class="baht"> บาท</span>';
-                                        echo    '<p class="card-text text-muted mb-0">ราคาปก <span><s>'.($result[1]->cost).' บาท</s></span></p>';
-                                        echo     '<p class="card-text text-muted mb-3">ลด '.($result[1]->cost)*(($result[1]->discount)/100)." บาท (".($result[1]->discount).'%)</p>';
+                                        echo    '<p class="card-text text-555 mb-0">ราคาปก <span><s>'.($result[1]->cost).' บาท</s></span></p>';
+                                        echo     '<p class="card-text text-555 mb-3">ลด '.number_format((($result[1]->cost)*(($result[1]->discount)/100)), 2, '.','')." บาท (".($result[1]->discount).'%)</p>';
                                         echo    '<li>มีสินค้าพร้อมส่ง</li></div>';
                                         echo     '<div class="col-md-6">
                                                 <select name="number">
@@ -155,13 +155,14 @@
                                             ?>
                                         <div class="row no-gutters">
                                             <div class="col-12 pt-5">
-                                                <?php    
+                                            <?php
+                                                    //  review
                                                 if ($result[1]->review == null){
                                                     ;
                                                 }
                                                 else{
                                                     for ( $i=0; $i<sizeof($result[1]->review); $i++){
-                                                        echo '<p style="font-size:20px">'.$result[1]->review[$i].'</p>';
+                                                        echo '<p class="review">'.$result[1]->review[$i].'</p>';
                                                     }
                                                 }
                                                 
@@ -170,9 +171,8 @@
                                                     ;
                                                 }
                                                 else{
-                                                    echo'<p style="font-size:20px"><b>- '.$result[1]->reviewer.'</b></p></div>';
-                                                }  
-                                                ?>
+                                                    echo '<p class="review"><b>- '.$result[1]->reviewer.'</b></p>';
+                                                }  ?>
                                             </div>
                                         </div>
                                 </div>

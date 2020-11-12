@@ -137,8 +137,8 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                 <span class="price">'.number_format((($result[0]->cost)-(($result[0]->cost)*(($result[0]->discount)/100))), 2, '.','').'</span><span class="baht"> บาท</span>';
-                                        echo    '<p class="card-text text-muted mb-0">ราคาปก <span><s>'.($result[0]->cost).' บาท</s></span></p>';
-                                        echo     '<p class="card-text text-muted mb-3">ลด '.($result[0]->cost)*(($result[0]->discount)/100)." บาท (".($result[0]->discount).'%)</p>';
+                                        echo    '<p class="card-text text-555 mb-0">ราคาปก <span><s>'.($result[0]->cost).' บาท</s></span></p>';
+                                        echo     '<p class="card-text text-555 mb-3">ลด '.number_format((($result[0]->cost)*(($result[0]->discount)/100)), 2, '.','')." บาท (".($result[0]->discount).'%)</p>';
                                         echo    '<li>มีสินค้าพร้อมส่ง</li></div>';
                                         echo     '<div class="col-md-6">
                                                 <select name="number">
@@ -155,29 +155,30 @@
                                                 </select>    
                                                 <button  title="เพิ่มในรถเข็น" class="button btn-cart red"><i class="icon-cart"></i> <span>เพิ่มในรถเข็น</span></button>
                                                 </div></div>
-                                            </div><br><br>'; 
+                                            </div><br><br>';
                                         // end 6. เปลี่ยนเป็นหนังสือที่ต้องการ 
                                             
                                             //  review
 
                                         // 7. เปลี่ยนเป็นหนังสือที่ต้องการ
-                                        if ($result[0]->review == null){
-                                            ;
-                                        }
-                                        else{
-                                            for ( $i=0; $i<sizeof($result[0]->review); $i++){
-                                                echo '<p style="font-size:20px">'.$result[0]->review[$i].'</p>';
-                                            }
-                                        }
                                         
-                                        //reviewer
-                                        if ($result[0]->reviewer == null){
-                                            ;
-                                        }
-                                        else{
-                                            '<p style="font-size:20px"><b>- '.$result[0]->reviewer.'</b></p></div>';
-                                        }  
-                                        ?>
+                                                    //  review
+                                                if ($result[0]->review == null){
+                                                    ;
+                                                }
+                                                else{
+                                                    for ( $i=0; $i<sizeof($result[0]->review); $i++){
+                                                        echo '<p class="review">'.$result[0]->review[$i].'</p>';
+                                                    }
+                                                }
+                                                
+                                                //reviewer
+                                                if ($result[0]->reviewer == null){
+                                                    ;
+                                                }
+                                                else{
+                                                    echo '<p class="review"><b>- '.$result[0]->reviewer.'</b></p>';
+                                                }  ?>
                                         <!-- end 7. เปลี่ยนเป็นหนังสือที่ต้องการ -->
                                     </div>
                                 </div>
