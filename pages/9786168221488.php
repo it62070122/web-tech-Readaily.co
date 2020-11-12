@@ -95,23 +95,30 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row" id="name">
-                                        <?php 
-                                            if($result[1]->thainame != null){
-                                                echo "<h1 class='title-book'>".$result[1]->thainame."</h1>";
-                                            }
                                         
-                                            if($result[1]->name != null){
-                                            echo '<h4><b>'.$result[1]->name."</b></h4>";
-                                            }
-                                            echo'<h4 class="subtitle-book"><a href="">'.$result[1]->artist.'</a></h4>';
+                                            <?php 
+                                                if($result[1]->thainame != null){
+                                                    echo "<h1 class='title-book'>".$result[1]->thainame."</h1>";
+                                                }
+                                            ?>
+                                            <div class="row no-gutters">
+                                                <div class="col-12 ">
+                                                    <?php
+                                                        if($result[1]->name != null){
+                                                        echo '<h4><b>'.$result[1]->name."</b></h4>";
+                                                        }
+                                                        echo'<h4 class="subtitle-book"><a href="">'.$result[1]->artist.'</a></h4>';
 
-                                            if ($result[1]->tag == null){
-                                                ;
-                                            }
-                                            else{
-                                            echo '
-                                            <h4><b>ซีรี่ส์: <span style="color:#E54343">'.$result[1]->tag[1].'</span></b></h4>';
-                                            } ?>
+                                                        if ($result[1]->tag == null){
+                                                            ;
+                                                        }
+                                                        else{
+                                                        echo '
+                                                        <h4><b>ซีรี่ส์: <span style="color:#E54343">'.$result[1]->tag[1].'</span></b></h4>';
+                                                        } ?>
+                                                </div>
+                                            </div>
+                                        
                                     </div>
 
                                     <div class="row" id="img2">
@@ -123,7 +130,7 @@
                                             <div class="box p-4" style="margin-top:5vh">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                <span class="price">'.number_format((($result[0]->cost)-(($result[0]->cost)*(($result[0]->discount)/100))), 2, '.','').'</span><span class="baht"> บาท</span>';
+                                                <span class="price">'.(($result[1]->cost)-(($result[1]->cost)*(($result[1]->discount)/100))).'</span><span class="baht"> บาท</span>';
                                         echo    '<p class="card-text text-muted mb-0">ราคาปก <span><s>'.($result[1]->cost).' บาท</s></span></p>';
                                         echo     '<p class="card-text text-muted mb-3">ลด '.($result[1]->cost)*(($result[1]->discount)/100)." บาท (".($result[1]->discount).'%)</p>';
                                         echo    '<li>มีสินค้าพร้อมส่ง</li></div>';
@@ -145,24 +152,29 @@
                                             </div><br><br>'; 
                                             
                                             //  review
-                                        if ($result[1]->review == null){
-                                            ;
-                                        }
-                                        else{
-                                            for ( $i=0; $i<sizeof($result[1]->review); $i++){
-                                                echo '<p style="font-size:20px">'.$result[1]->review[$i].'</p>';
-                                            }
-                                        }
-                                        
-                                        //reviewer
-                                        if ($result[1]->reviewer == null){
-                                            ;
-                                        }
-                                        else{
-                                            echo'<p style="font-size:20px"><b>- '.$result[1]->reviewer.'</b></p></div>';
-                                        }  
-                                        ?>
-                                    </div>
+                                            ?>
+                                        <div class="row no-gutters">
+                                            <div class="col-12 pt-5">
+                                                <?php    
+                                                if ($result[1]->review == null){
+                                                    ;
+                                                }
+                                                else{
+                                                    for ( $i=0; $i<sizeof($result[1]->review); $i++){
+                                                        echo '<p style="font-size:20px">'.$result[1]->review[$i].'</p>';
+                                                    }
+                                                }
+                                                
+                                                //reviewer
+                                                if ($result[1]->reviewer == null){
+                                                    ;
+                                                }
+                                                else{
+                                                    echo'<p style="font-size:20px"><b>- '.$result[1]->reviewer.'</b></p></div>';
+                                                }  
+                                                ?>
+                                            </div>
+                                        </div>
                                 </div>
                                 
                                 
