@@ -130,7 +130,7 @@
                                             <div class="box p-4" style="margin-top:5vh">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                <span class="price">'.(($result[1]->cost)-(($result[1]->cost)*(($result[1]->discount)/100))).'</span><span class="baht"> บาท</span>';
+                                                <span class="price">'.number_format((($result[1]->cost)-(($result[1]->cost)*(($result[1]->discount)/100))), 2, '.','').'</span><span class="baht"> บาท</span>';
                                         echo    '<p class="card-text text-muted mb-0">ราคาปก <span><s>'.($result[1]->cost).' บาท</s></span></p>';
                                         echo     '<p class="card-text text-muted mb-3">ลด '.($result[1]->cost)*(($result[1]->discount)/100)." บาท (".($result[1]->discount).'%)</p>';
                                         echo    '<li>มีสินค้าพร้อมส่ง</li></div>';
