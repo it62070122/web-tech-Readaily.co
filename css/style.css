@@ -400,3 +400,12 @@
         font-size: 1.875em;
         font-weight: 700;
     }
+    
+    .text-555 {
+        color: #555555;
+    }
+    
+    .review {
+        font-family: "readery_slab_regular", sans-serif;
+        font-size: 1.4375em;
+    }
