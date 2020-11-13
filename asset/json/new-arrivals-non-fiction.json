@@ -1,8 +1,8 @@
 [{
         "covertag": ["new release"],
         "img": "9786162985133.png",
-        "thainame": "เป็นคนที่ใช่ในงานที่ชอบ",
-        "name": "Put the Right Man on the Like Job",
+        "thainame": "Put the Right Man on the Like Job เป็นคนที่ใช่ในงานที่ชอบ",
+        "name": null,
         "artist": "โอมศิริ วีระกุล",
         "translater": null,
         "coverdesigner": null,
@@ -24,8 +24,8 @@
     {
         "covertag": ["new release"],
         "img": "9786162985027.jpg",
-        "thainame": "เผ่าพันธุ์แห่งการเรียนรู้",
-        "name": "Earsmus Generation",
+        "thainame": "Earsmus Generation เผ่าพันธุ์แห่งการเรียนรู้",
+        "name": null,
         "artist": "พชร สูงเด่น",
         "translater": null,
         "coverdesigner": "Routine",
