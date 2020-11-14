@@ -1,0 +1,48 @@
+
+[
+    {
+        "covertag" : null,
+        "img" : "9786167196565.jpg",
+        "thainame": "ดินแดนคนตาบอด",
+        "artist" : "H. G. Wells.",
+        "key" : "9786167196565",
+        "cost" : 135,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786161836900.jpg",
+        "thainame": "ในสวนลับ",
+        "artist" : "Frances Hodgson Burnett",
+        "key" : "9786161836900",
+        "cost" : 245,
+        "discount" : 5
+    },
+    {
+        "covertag" : null,
+        "img" : "9786161830588.png",
+        "thainame": "บ้านมุมพูห์",
+        "artist" : "A. A. Milne",
+        "key" : "9786161830588",
+        "cost" : 155,
+        "discount" : 5
+    },
+    {
+        "covertag" : null,
+        "img" : "9786161825959.png",
+        "thainame": "วินนีเดอะพูห์",
+        "artist" : "A. A. Milne",
+        "key" : "9786161825959",
+        "cost" : 155,
+        "discount" : 5
+    },
+    {
+        "covertag" : null,
+        "img" : "9786167196961.png",
+        "thainame": "โลกแบน เรื่องรักหลากมิติ",
+        "artist" : "Edwin A. Abbott",
+        "key" : "9786167196961",
+        "cost" : 200,
+        "discount" : 10
+    }
+]

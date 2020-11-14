@@ -1,0 +1,48 @@
+
+[
+    {
+        "covertag" : null,
+        "img" : "9786168123256.jpg",
+        "thainame": "มาธิลดา",
+        "artist" : "Mary Shelley",
+        "key" : "9786168123256",
+        "cost" : 220,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786167474649.jpg",
+        "thainame": "คดีความ",
+        "artist" : "Franz Kafka",
+        "key" : "9786167474649",
+        "cost" : 315,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786167184982.jpg",
+        "thainame": "กลางฝูงหมา",
+        "artist" : "Naguib Mahfouz",
+        "key" : "9786167184982",
+        "cost" : 440,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786168123195.png",
+        "thainame": "สายลับต้นฉบับรัก",
+        "artist" : "Luis Fernando Verissimo",
+        "key" : "9786168123195",
+        "cost" : 250,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786168053096.png",
+        "thainame": "สู่หนไหน ต้นฉบับม้วนกระดาษพิมพ์ดีด",
+        "artist" : "Edwin A. Abbott",
+        "key" : "9786168053096",
+        "cost" : 467,
+        "discount" : 10
+    }
+]
