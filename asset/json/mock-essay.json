@@ -1,0 +1,48 @@
+
+[
+    {
+        "covertag" : ["new release"],
+        "img" : "9786169317821.png",
+        "thainame": "I WILL BE BACK",
+        "artist" : "กันต์ ชุณหวัตร",
+        "key" : "9786169317821",
+        "cost" : 380,
+        "discount" : 10
+    },
+    {
+        "covertag" : ["new release"],
+        "img" : "9786162985041.jpg",
+        "thainame": "SONGSTRUCK ทุกเพลงที่ได้ฟัง… ยังคงนึกถึงคุณ",
+        "artist" : "อุทิศ เหมะมูล",
+        "key" : "9786162985041",
+        "cost" : 250,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786162985119.jpg",
+        "thainame": "Kyoto Slow but Learn วิ่งข้างใน ไปข้างนอก",
+        "artist" : "ตุลย์ ปลานิลเต็มบ้าน",
+        "key" : "9786162985119",
+        "cost" : 225,
+        "discount" : 10
+    },
+    {
+        "covertag" : ["new release"],
+        "img" : "9786163017192.jpg",
+        "thainame": "ศิลป์สถานะ State of the Art; On Thai Contemporary Art",
+        "artist" : "ถนอม ชาภักดี",
+        "key" : "9786163017192",
+        "cost" : 480,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786162985065.jpg",
+        "thainame": "อาคิเต็กเจอ",
+        "artist" : "ชัชวาล สุวรรณสวัสดิ์",
+        "key" : "9786162985065",
+        "cost" : 370,
+        "discount" : 10
+    }
+]

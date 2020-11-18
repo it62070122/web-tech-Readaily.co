@@ -1,0 +1,48 @@
+
+[
+    {
+        "covertag" : ["new release"],
+        "img" : "9786168215265.png",
+        "thainame": "ฟูโกต์กับเสรีนิยมใหม่",
+        "artist" : "ชีรา ทองกระจาย",
+        "key" : "9786168215265",
+        "cost" : 450,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9786167158969.png",
+        "thainame": "ในฝันอันเหลือจะกล่าว: นิยมนิยายอันเหลือจะบรรยาย",
+        "artist" : "เดือนวาด พิมวนา",
+        "key" : "9786167158969",
+        "cost" : 250,
+        "discount" : 10
+    },
+    {
+        "covertag" : ["new release"],
+        "img" : "9786163884725.png",
+        "thainame": "แฟรงก์ เบ็ตต์เจอร์ ยอดนักขายประกันชีวิตของโลก",
+        "artist" : "Frank Bettger",
+        "key" : "9786163884725",
+        "cost" : 320,
+        "discount" : 10
+    },
+    {
+        "covertag" : ["new release"],
+        "img" : "9786164460089.jpeg",
+        "thainame": "เสียงพูดสุดท้าย 'รงค์ วงษ์สวรรค์",
+        "artist" : "วรพจน์ พันธุ์พงศ์",
+        "key" : "9786164460089",
+        "cost" : 300,
+        "discount" : 10
+    },
+    {
+        "covertag" : null,
+        "img" : "9789740217190.jpeg",
+        "thainame": "หมู่เกาะมาเลย์ 2 (ปกแข็ง)",
+        "artist" : "Alfred Russel Wallace",
+        "key" : "9789740217190",
+        "cost" : 440,
+        "discount" : 10
+    }
+]
