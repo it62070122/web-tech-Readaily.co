@@ -51,7 +51,7 @@
                         echo "<div class=\"pre-order\"></div>";
                     }
                     else{
-                        ;
+                        continue;
                     }
 
                     echo "<a class=\"thainame mb-1 text-decoration-none\" ";
