@@ -34,7 +34,7 @@
     /* End content */
 
     // Category box 
-    include "asset/categorybox.html";
+    include "asset/index/categorybox.html";
     // Top button
     include "asset/backtotop.html";
     // Footer
