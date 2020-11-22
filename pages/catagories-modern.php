@@ -44,14 +44,11 @@
                     }
     
 
-                    if($result[$i]->covertag[0] == "new release"){
+                    if($result[$i]->covertag == "new release"){
                         echo "<div class=\"new-release\"></div>";
                     }
-                    else if($result[$i]->covertag[0] == "Pre-Order"){
+                    else if($result[$i]->covertag == "Pre-Order"){
                         echo "<div class=\"pre-order\"></div>";
-                    }
-                    else{
-                        continue;
                     }
 
                     echo "<a class=\"thainame mb-1 text-decoration-none\" ";

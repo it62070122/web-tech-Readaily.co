@@ -1,5 +1,5 @@
 <?php
-    $url = "../asset/json/mock-memoir.json";
+    $url = "../asset/json/mock-memoir.json";    
     $response = file_get_contents($url);
     $result = json_decode($response);
 ?>
@@ -32,7 +32,7 @@
     <div class="row no-gutters padding-content d-flex justify-content-center">
         <div class="container p-0">
             <h1 id="title" style="font-size: 2.75em">Memoir & Documentary</h1>
-            <?php for ($j=0; $j<3; $j++){ 
+            <?php for ($j=0; $j<4; $j++){ 
             echo '<div class="row align-self-start mt-4">';
                 for ($i=0; $i<count($result); $i++){
                     echo "<div class=\"col-6 col-md\" id=\"books\">";
@@ -44,14 +44,11 @@
                     }
     
 
-                    if($result[$i]->covertag[0] == "new release"){
+                    if($result[$i]->covertag == "new release"){
                         echo "<div class=\"new-release\"></div>";
                     }
-                    else if($result[$i]->covertag[0] == "Pre-Order"){
+                    else if($result[$i]->covertag == "Pre-Order"){
                         echo "<div class=\"pre-order\"></div>";
-                    }
-                    else{
-                        continue;
                     }
 
                     echo "<a class=\"thainame mb-1 text-decoration-none\" ";
